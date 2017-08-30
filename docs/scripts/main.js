@@ -3,14 +3,14 @@ console.log('Startup');
 $(document).ready(function () {
 	$("#navHealthcare").click(function() {
         console.log('Clicked Healthcare');
-        navigate('healthcare');
+        navigate('healthcare.md');
 	});
 });
 
 function navigate(section){
-    console.log('Navigation to ' + section);
+    console.log('Loading ' + section);
     $.ajax({
-        url: section + ".md",
+        url: section,
         context: document.body,
         success: function(mdText){
           //where text will be the text returned by the ajax call
